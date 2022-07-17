@@ -202,6 +202,10 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.fadeIn(1, 0, 0.7);
 		}
 
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+
 		super.create();
 	}
 
