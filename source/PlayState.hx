@@ -1196,6 +1196,10 @@ class PlayState extends MusicBeatState
 		songSignTxt.cameras = [camHUD];
 		millerSubtitles.cameras = [camHUD];
 
+		#if android
+		addAndroidControls();
+		#end
+
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -1648,6 +1652,10 @@ class PlayState extends MusicBeatState
 			callOnLuas('onStartCountdown', []);
 			return;
 		}
+
+		#if android
+		androidControls.visible = true;
+		#end
 
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
@@ -3426,6 +3434,9 @@ class PlayState extends MusicBeatState
 			}
 		}
 		
+		#if android
+		androidControls.visible = false;
+		#end
 		timeBarBG.visible = false;
 		timeBar.visible = false;
 		timeTxt.visible = false;
