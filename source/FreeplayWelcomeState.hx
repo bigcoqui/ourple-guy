@@ -24,6 +24,10 @@ class FreeplayWelcomeState extends MusicBeatState
 		bg = new FlxSprite().loadGraphic(Paths.image('freeplaywelcome', 'preload'));
         bg.screenCenter();
 		add(bg);
+
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end
 	}
 
 	override function update(elapsed:Float)
