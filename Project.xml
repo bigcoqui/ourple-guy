@@ -155,10 +155,6 @@
 	<haxedef name="HXCPP_CHECK_POINTER" if="release" />
 	<haxedef name="HXCPP_STACK_LINE" if="release" />
 
-	<!-- Android permissions -->
-	<android permission="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<android permission="android.permission.READ_EXTERNAL_STORAGE" />
-
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
