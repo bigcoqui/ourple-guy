@@ -23,6 +23,10 @@ class FlashingState extends MusicBeatState
 
 		bg = new FlxSprite().loadGraphic(Paths.image('warning', 'preload'));
 		add(bg);
+
+		#if android
+		addVirtualPad(NONE, A_B);
+		#end
 	}
 
 	override function update(elapsed:Float)
