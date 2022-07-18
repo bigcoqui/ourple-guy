@@ -778,12 +778,7 @@ class PlayState extends MusicBeatState
 				}
 			case 'vhs':
 				GameOverSubstate.jumpscare = true;
-				new DynamicShaderHandler('CRT', false);
-				var shaderArray = new Array<BitmapFilter>();
-				shaderArray.push(new ShaderFilter(animatedShaders['CRT'].shader));
-				camGame.setFilters(shaderArray);
 				camHUD.useBgAlphaBlending = true;
-				camHUD.setFilters(shaderArray);
 				camGame.filtersEnabled = !ClientPrefs.lowQuality;
 				camHUD.filtersEnabled = !ClientPrefs.lowQuality;
 		}
