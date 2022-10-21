@@ -4,6 +4,7 @@ import Section.SwagSection;
 import haxe.Json;
 import haxe.format.JsonParser;
 import lime.utils.Assets;
+import openfl.utils.Assets as OpenFlAssets;
 
 #if sys
 import sys.io.File;
@@ -104,7 +105,7 @@ class Song
 
 		if(rawJson == null) {
 			#if sys
-			rawJson = File.getContent(SUtil.getPath() + Paths.json(formattedFolder + '/' + formattedSong)).trim();
+			rawJson = OpenFlAssets.getTxt(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#else
 			rawJson = Assets.getText(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#end
